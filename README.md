@@ -1,4 +1,4 @@
-# Huffman Project: Encoder and Decoder (C++)
+# **Huffman Project: Encoder and Decoder (C++)**
 
 This project implements the **Huffman** *lossless* data compression and decompression algorithm. It consists of two command-line utilities that work together to reduce file sizes and accurately restore them to their original state.
 
@@ -41,5 +41,6 @@ To restore a compressed file, use the `decoder` utility:
 
 ## 📚Documentation
 The detailed codebase documentation was generated using **Doxygen**.
-To view the documentation locally, open the following file in any web browser:
-`html/index.html`
+You can view the full interactive documentation online here:
+
+👉 **[Huffman Project Documentation](https://amaliatanase.github.io/Huffman-Encoding/)**
