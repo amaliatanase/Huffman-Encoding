@@ -1,0 +1,167 @@
+\doxysection{Huffman Class Reference}
+\hypertarget{class_huffman}{}\label{class_huffman}\index{Huffman@{Huffman}}
+
+
+Handles the complete lifecycle of \doxylink{class_huffman}{Huffman} encoding and decoding.  
+
+
+
+
+{\ttfamily \+\#include $<$Huffman.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_huffman_a39b1a1e952651b9244d5fcde34657f7d}{compute\+Histogram}} (const std::\+string \&input\+File\+Path, uint64\+\_\+t histogram\+[\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\+\_\+\+SIZE}}]\+)
+\begin{DoxyCompactList}\small\item\em Computes the frequency of each byte in the input file. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_huffman_ac10f86f3af81bfdb2c9e729d2501bd7f}{build\+Huffman\+Tree}} (const uint64\+\_\+t histogram\+[\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\+\_\+\+SIZE}}]\+)
+\begin{DoxyCompactList}\small\item\em Builds the optimal \doxylink{class_huffman}{Huffman} tree using a priority queue. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_huffman_a33d1c7c543cdf67915eaada39733c873}{generate\+Code\+Table}} (\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}root, \doxymbox{\hyperlink{class_code}{Code}} \&current\+Node, \doxymbox{\hyperlink{class_code}{Code}} code\+Table\+[\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\+\_\+\+SIZE}}]\+)
+\begin{DoxyCompactList}\small\item\em Generates the binary codes for all characters by traversing the tree. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_huffman_a356473130f3dfb0b6800265802ad7458}{reconstruct\+Tree}} (const uint8\+\_\+t tree\+\_\+dump\+[$\,$]\+, uint32\+\_\+t dump\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Rebuilds a \doxylink{class_huffman}{Huffman} tree from its serialized post-\/order dump. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_huffman_a2a92d22736879e8b4d3f07213c3f3ce7}{write\+Tree\+Dump}} (\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}root, std::\+ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Serializes the \doxylink{class_huffman}{Huffman} tree to a file using post-\/order traversal. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_huffman_a10d9af43e18ffd3296ba8c05ca56281b}{compress\+File}} (const std::\+string \&input\+File\+Path, const std::\+string \&output\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Compresses an input file using \doxylink{class_huffman}{Huffman} encoding. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_huffman_ac0840295377d62cfc3c80407baa52451}{decompress\+File}} (const std::\+string \&input\+File\+Path, const std::\+string \&output\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Decompresses a \doxylink{class_huffman}{Huffman} encoded file back to its original state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the complete lifecycle of \doxylink{class_huffman}{Huffman} encoding and decoding. 
+
+\label{doc-func-members}
+\Hypertarget{class_huffman_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_huffman_ac10f86f3af81bfdb2c9e729d2501bd7f}\index{Huffman@{Huffman}!buildHuffmanTree@{buildHuffmanTree}}
+\index{buildHuffmanTree@{buildHuffmanTree}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{buildHuffmanTree()}{buildHuffmanTree()}}
+{\footnotesize\ttfamily \label{class_huffman_ac10f86f3af81bfdb2c9e729d2501bd7f} 
+\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Huffman::\+build\+Huffman\+Tree (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{histogram}{\+[\+ALPHABET\+\_\+\+SIZE]\+}\end{DoxyParamCaption})}
+
+
+
+Builds the optimal \doxylink{class_huffman}{Huffman} tree using a priority queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em histogram} & The pre-\/computed array of character frequencies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the root node of the generated \doxylink{class_huffman}{Huffman} tree. 
+\end{DoxyReturn}
+\Hypertarget{class_huffman_a10d9af43e18ffd3296ba8c05ca56281b}\index{Huffman@{Huffman}!compressFile@{compressFile}}
+\index{compressFile@{compressFile}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{compressFile()}{compressFile()}}
+{\footnotesize\ttfamily \label{class_huffman_a10d9af43e18ffd3296ba8c05ca56281b} 
+void Huffman::\+compress\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{input\+File\+Path}{, }\item[{const std::\+string \&}]{output\+File\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Compresses an input file using \doxylink{class_huffman}{Huffman} encoding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File\+Path} & Path to the original file to compress. \\
+\hline
+{\em output\+File\+Path} & Path where the compressed binary file (.huff) will be saved. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_huffman_a39b1a1e952651b9244d5fcde34657f7d}\index{Huffman@{Huffman}!computeHistogram@{computeHistogram}}
+\index{computeHistogram@{computeHistogram}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{computeHistogram()}{computeHistogram()}}
+{\footnotesize\ttfamily \label{class_huffman_a39b1a1e952651b9244d5fcde34657f7d} 
+void Huffman::\+compute\+Histogram (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{input\+File\+Path}{, }\item[{uint64\+\_\+t}]{histogram}{\+[\+ALPHABET\+\_\+\+SIZE]\+}\end{DoxyParamCaption})}
+
+
+
+Computes the frequency of each byte in the input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File\+Path} & Path to the file to be analyzed. \\
+\hline
+{\em histogram} & Array of size ALPHABET\+\_\+\+SIZE where frequencies will be stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_huffman_ac0840295377d62cfc3c80407baa52451}\index{Huffman@{Huffman}!decompressFile@{decompressFile}}
+\index{decompressFile@{decompressFile}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{decompressFile()}{decompressFile()}}
+{\footnotesize\ttfamily \label{class_huffman_ac0840295377d62cfc3c80407baa52451} 
+void Huffman::\+decompress\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{input\+File\+Path}{, }\item[{const std::\+string \&}]{output\+File\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Decompresses a \doxylink{class_huffman}{Huffman} encoded file back to its original state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File\+Path} & Path to the compressed file (.huff). \\
+\hline
+{\em output\+File\+Path} & Path where the restored data will be written (or /\+dev/\+stdout). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_huffman_a33d1c7c543cdf67915eaada39733c873}\index{Huffman@{Huffman}!generateCodeTable@{generateCodeTable}}
+\index{generateCodeTable@{generateCodeTable}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{generateCodeTable()}{generateCodeTable()}}
+{\footnotesize\ttfamily \label{class_huffman_a33d1c7c543cdf67915eaada39733c873} 
+void Huffman::\+generate\+Code\+Table (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{, }\item[{\doxymbox{\hyperlink{class_code}{Code}} \&}]{current\+Node}{, }\item[{\doxymbox{\hyperlink{class_code}{Code}}}]{code\+Table}{\+[\+ALPHABET\+\_\+\+SIZE]\+}\end{DoxyParamCaption})}
+
+
+
+Generates the binary codes for all characters by traversing the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Pointer to the root of the \doxylink{class_huffman}{Huffman} tree. \\
+\hline
+{\em current\+Node} & A temporary \doxylink{class_code}{Code} object used during traversal (must be empty initially). \\
+\hline
+{\em code\+Table} & Array where the resulting codes will be stored, indexed by character. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_huffman_a356473130f3dfb0b6800265802ad7458}\index{Huffman@{Huffman}!reconstructTree@{reconstructTree}}
+\index{reconstructTree@{reconstructTree}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{reconstructTree()}{reconstructTree()}}
+{\footnotesize\ttfamily \label{class_huffman_a356473130f3dfb0b6800265802ad7458} 
+\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Huffman::\+reconstruct\+Tree (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{tree\+\_\+dump}{\+[$\,$]\+, }\item[{uint32\+\_\+t}]{dump\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Rebuilds a \doxylink{class_huffman}{Huffman} tree from its serialized post-\/order dump. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree\+\_\+dump} & Array containing the \textquotesingle{}L\textquotesingle{} (Leaf) and \textquotesingle{}T\textquotesingle{} (Interior) byte sequence. \\
+\hline
+{\em dump\+\_\+size} & The length of the tree\+\_\+dump array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the root of the reconstructed \doxylink{class_huffman}{Huffman} tree. 
+\end{DoxyReturn}
+\Hypertarget{class_huffman_a2a92d22736879e8b4d3f07213c3f3ce7}\index{Huffman@{Huffman}!writeTreeDump@{writeTreeDump}}
+\index{writeTreeDump@{writeTreeDump}!Huffman@{Huffman}}
+\doxysubsubsection{\texorpdfstring{writeTreeDump()}{writeTreeDump()}}
+{\footnotesize\ttfamily \label{class_huffman_a2a92d22736879e8b4d3f07213c3f3ce7} 
+void Huffman::\+write\+Tree\+Dump (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{, }\item[{std::\+ofstream \&}]{out\+File}{}\end{DoxyParamCaption})}
+
+
+
+Serializes the \doxylink{class_huffman}{Huffman} tree to a file using post-\/order traversal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Pointer to the root of the tree to be dumped. \\
+\hline
+{\em out\+File} & The output file stream where the tree will be written. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_huffman_8h}{Huffman.\+h}}\item 
+Huffman.\+cpp\end{DoxyCompactItemize}

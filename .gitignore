@@ -8,5 +8,3 @@ cmake-build-*/
 .idea/
 .DS_Store
 
-html/
-latex/

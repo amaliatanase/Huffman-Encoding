@@ -1,0 +1,31 @@
+\doxysection{Header Struct Reference}
+\hypertarget{struct_header}{}\label{struct_header}\index{Header@{Header}}
+
+
+Represents the metadata written at the beginning of a compressed file.  
+
+
+
+
+{\ttfamily \+\#include $<$Huffman.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_header_a6d431f55b8493c8e12e5d140918ec4f9}\label{struct_header_a6d431f55b8493c8e12e5d140918ec4f9} 
+uint32\+\_\+t {\bfseries signature}
+\begin{DoxyCompactList}\small\item\em Magic number to verify file validity (0x\+DEADEAEF). \end{DoxyCompactList}\item 
+\Hypertarget{struct_header_a655fff9070dbd240dad6323c959c3f31}\label{struct_header_a655fff9070dbd240dad6323c959c3f31} 
+uint32\+\_\+t {\bfseries tree\+\_\+size}
+\begin{DoxyCompactList}\small\item\em Size of the serialized \doxylink{class_huffman}{Huffman} tree dump in bytes. \end{DoxyCompactList}\item 
+\Hypertarget{struct_header_a90ae58fc8e56804adfa739c73cde886f}\label{struct_header_a90ae58fc8e56804adfa739c73cde886f} 
+uint64\+\_\+t {\bfseries file\+\_\+size}
+\begin{DoxyCompactList}\small\item\em Original size of the uncompressed file in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the metadata written at the beginning of a compressed file. 
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_huffman_8h}{Huffman.\+h}}\end{DoxyCompactItemize}

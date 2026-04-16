@@ -1,0 +1,31 @@
+\doxysection{defines.\+h File Reference}
+\hypertarget{defines_8h}{}\label{defines_8h}\index{defines.h@{defines.h}}
+
+
+Contains global constants and macros used throughout the \doxylink{class_huffman}{Huffman} project.  
+
+
+{\ttfamily \+\#include $<$cstdint$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{defines_8h_a52220397ecea855b3a99746e451426e1}\label{defines_8h_a52220397ecea855b3a99746e451426e1} 
+\+\#define {\bfseries BLOCK}~4096
+\begin{DoxyCompactList}\small\item\em The size of the buffer used for reading/\+writing files. \end{DoxyCompactList}\item 
+\Hypertarget{defines_8h_a6572f1706059832f94025fa12c6c45ed}\label{defines_8h_a6572f1706059832f94025fa12c6c45ed} 
+\+\#define {\bfseries ALPHABET\+\_\+\+SIZE}~256
+\begin{DoxyCompactList}\small\item\em The total number of possible byte values (ASCII + Extended ASCII). \end{DoxyCompactList}\item 
+\Hypertarget{defines_8h_a94630370ae389fb1189282fa0742f310}\label{defines_8h_a94630370ae389fb1189282fa0742f310} 
+\+\#define {\bfseries MAGIC}~0x\+DEADEAEF
+\begin{DoxyCompactList}\small\item\em The 32-\/bit magic number used to verify valid \doxylink{class_huffman}{Huffman} compressed files. \end{DoxyCompactList}\item 
+\Hypertarget{defines_8h_ac417f30b11356d61ab40f1dad7337ae7}\label{defines_8h_ac417f30b11356d61ab40f1dad7337ae7} 
+\+\#define {\bfseries MAX\+\_\+\+CODE\+\_\+\+SIZE}~(\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\+\_\+\+SIZE}} /\+ 8)
+\begin{DoxyCompactList}\small\item\em The maximum length of a \doxylink{class_huffman}{Huffman} code in bytes (256 bits). \end{DoxyCompactList}\item 
+\Hypertarget{defines_8h_a0cd2d37d08829f2ed279dc160050c5e4}\label{defines_8h_a0cd2d37d08829f2ed279dc160050c5e4} 
+\+\#define {\bfseries MAX\+\_\+\+TREE\+\_\+\+SIZE}~(3 \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\+\_\+\+SIZE}} -\/ 1)
+\begin{DoxyCompactList}\small\item\em The maximum possible size of the serialized \doxylink{class_huffman}{Huffman} tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains global constants and macros used throughout the \doxylink{class_huffman}{Huffman} project. 
+

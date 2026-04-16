@@ -1,0 +1,102 @@
+\doxysection{Node Class Reference}
+\hypertarget{class_node}{}\label{class_node}\index{Node@{Node}}
+
+
+Represents a single element (leaf or interior node) in the \doxylink{class_huffman}{Huffman} tree.  
+
+
+
+
+{\ttfamily \+\#include $<$Node.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_node_add54684f2798b3b5b04dc5db767213b8}{Node}} (uint8\+\_\+t symbol, uint64\+\_\+t frequency)
+\begin{DoxyCompactList}\small\item\em Constructor for a new \doxylink{class_node}{Node}. \end{DoxyCompactList}\item 
+uint64\+\_\+t \doxymbox{\hyperlink{class_node_a4ebe14f8a8c5299aa4bd10d631c3b67d}{get\+Frequency}} () const
+\begin{DoxyCompactList}\small\item\em Gets the frequency of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_node_abef347e2d2ee9d2b0a73e50520627867}{join}} (\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}left\+Child, \doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}right\+Child)
+\begin{DoxyCompactList}\small\item\em Joins two child nodes to create an interior parent node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_node_a169ca272c610d6802c68de5de5911ab8}\label{class_node_a169ca272c610d6802c68de5de5911ab8} 
+class {\bfseries Huffman}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single element (leaf or interior node) in the \doxylink{class_huffman}{Huffman} tree. 
+
+\label{doc-constructors}
+\Hypertarget{class_node_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_node_add54684f2798b3b5b04dc5db767213b8}\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily \label{class_node_add54684f2798b3b5b04dc5db767213b8} 
+Node::\+\+Node (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{symbol}{, }\item[{uint64\+\_\+t}]{frequency}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for a new \doxylink{class_node}{Node}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The 8-\/bit character this node represents. \\
+\hline
+{\em frequency} & The number of times this symbol appears in the input data. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_node_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_node_a4ebe14f8a8c5299aa4bd10d631c3b67d}\index{Node@{Node}!getFrequency@{getFrequency}}
+\index{getFrequency@{getFrequency}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{getFrequency()}{getFrequency()}}
+{\footnotesize\ttfamily \label{class_node_a4ebe14f8a8c5299aa4bd10d631c3b67d} 
+uint64\+\_\+t Node::\+get\+Frequency (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the frequency of the node. 
+
+\begin{DoxyReturn}{Returns}
+The occurrence count of the symbol. 
+\end{DoxyReturn}
+\Hypertarget{class_node_abef347e2d2ee9d2b0a73e50520627867}\index{Node@{Node}!join@{join}}
+\index{join@{join}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily \label{class_node_abef347e2d2ee9d2b0a73e50520627867} 
+\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Node::\+join (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{left\+Child}{, }\item[{\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}}]{right\+Child}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Joins two child nodes to create an interior parent node. 
+
+
+\begin{DoxyItemize}
+\item The new parent node will have the symbol \textquotesingle{}\$\textquotesingle{} and a frequency equal to the sum of its children\textquotesingle{}s frequencies.
+\item 
+\begin{DoxyParams}{Parameters}
+{\em left\+Child} & Pointer to the node that will become the left child. \\
+\hline
+{\em right\+Child} & Pointer to the node that will become the right child. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly dynamically allocated parent node. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_node_8h}{Node.\+h}}\item 
+Node.\+cpp\end{DoxyCompactItemize}

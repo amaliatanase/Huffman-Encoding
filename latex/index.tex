@@ -1,0 +1,46 @@
+\chapter{Huffman Project:\+ Encoder and Decoder (C++) }
+\hypertarget{index}{}\label{index}\index{Huffman Project: Encoder and Decoder (C++)@{Huffman Project: Encoder and Decoder (C++)}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+
+
+This project implements the {\bfseries{\doxylink{class_huffman}{Huffman}}} {\itshape lossless} data compression and decompression algorithm. It consists of two command-\/line utilities that work together to reduce file sizes and accurately restore them to their original state.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{🚀 Features}{🚀 Features}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Encoder ({\ttfamily encoder})}}:\+ Calculates character frequencies, builds an optimal \doxylink{class_huffman}{Huffman} tree, and writes a compressed binary file ({\ttfamily .huff}) using bit-\/level manipulation (bit-\/packing).
+\item {\bfseries{Decoder ({\ttfamily decoder})}}:\+ Reads the header and serialized tree structure from the compressed file to reconstruct the original text. It supports output redirection to {\ttfamily stdout} if no output file is specified.
+\item {\bfseries{Detailed Statistics ({\ttfamily -\/s})}}:\+ Both applications can calculate and display the percentage of space saved after compression.
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{🛠️ Compilation}{🛠️ Compilation}}\label{index_autotoc_md2}
+The project uses the C++17 standard (specifically for {\ttfamily std::\+filesystem}). To compile the two utilities, open a terminal in the project folder and run:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Compile\ the\ Encoder}
+\DoxyCodeLine{g++\ -\/std=c++17\ encoder\_main.cpp\ Huffman.cpp\ Node.cpp\ Code.cpp\ -\/o\ encoder}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Compile\ the\ Decoder}
+\DoxyCodeLine{g++\ -\/std=c++17\ decoder\_main.cpp\ Huffman.cpp\ Node.cpp\ Code.cpp\ -\/o\ decoder}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{📖\+Usage}{📖\+Usage}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{1. Compression (Encoder)}{1. Compression (Encoder)}}\label{index_autotoc_md4}
+To compress a file, use the {\ttfamily encoder} utility:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./encoder\ -\/i\ original\_text.txt\ -\/o\ compressed\_file.huff\ -\/s}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{2. Decompression (Decoder)}{2. Decompression (Decoder)}}\label{index_autotoc_md5}
+To restore a compressed file, use the {\ttfamily decoder} utility:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./decoder\ -\/i\ compressed\_file.huff\ -\/o\ recovered\_text.txt\ -\/s}
+
+\end{DoxyCode}
+ {\itshape (If you omit the {\ttfamily -\/o} flag, the decoded text will be printed directly to the terminal /\+ {\ttfamily stdout})}.\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Available Options:\+}{Available Options:\+}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/h} :\+ Displays the help message and exits.
+\item {\ttfamily -\/i \texorpdfstring{$<$}{<}file\texorpdfstring{$>$}{>}} :\+ Specifies the input file.
+\item {\ttfamily -\/o \texorpdfstring{$<$}{<}file\texorpdfstring{$>$}{>}} :\+ Specifies the output file.
+\item {\ttfamily -\/s} :\+ Displays detailed compression statistics (original size, compressed size, and space saved).
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{📚\+Documentation}{📚\+Documentation}}\label{index_autotoc_md7}
+The detailed codebase documentation was generated using {\bfseries{Doxygen}}. To view the documentation locally, open the following file in any web browser:\+ {\ttfamily html/\+index.\+html} 

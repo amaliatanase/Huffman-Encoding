@@ -1,0 +1,26 @@
+\doxysection{Huffman.\+h File Reference}
+\hypertarget{_huffman_8h}{}\label{_huffman_8h}\index{Huffman.h@{Huffman.h}}
+
+
+Core logic for the \doxylink{class_huffman}{Huffman} compression and decompression algorithms.  
+
+
+{\ttfamily \+\#include "{}defines.\+h"{}}\newline
+{\ttfamily \+\#include "{}Node.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$queue$>$}\newline
+{\ttfamily \+\#include "{}Code.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_header}{Header}}
+\begin{DoxyCompactList}\small\item\em Represents the metadata written at the beginning of a compressed file. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_compare_node}{Compare\+Node}}
+\begin{DoxyCompactList}\small\item\em Comparator used by the priority queue to order nodes by frequency. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_huffman}{Huffman}}
+\begin{DoxyCompactList}\small\item\em Handles the complete lifecycle of \doxylink{class_huffman}{Huffman} encoding and decoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core logic for the \doxylink{class_huffman}{Huffman} compression and decompression algorithms. 
+

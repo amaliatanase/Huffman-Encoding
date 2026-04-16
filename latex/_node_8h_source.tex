@@ -1,0 +1,23 @@
+\doxysection{Node.\+h}
+\hypertarget{_node_8h_source}{}\label{_node_8h_source}\doxymbox{\hyperlink{_node_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_node_add54684f2798b3b5b04dc5db767213b8}{Node}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{class_node_add54684f2798b3b5b04dc5db767213b8}{Node}}(uint8\_t\ symbol,\ uint64\_t\ frequency);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_node_add54684f2798b3b5b04dc5db767213b8}{Node}}*\ \doxymbox{\hyperlink{class_node_abef347e2d2ee9d2b0a73e50520627867}{join}}(\doxymbox{\hyperlink{class_node_add54684f2798b3b5b04dc5db767213b8}{Node}}*\ leftChild,\doxymbox{\hyperlink{class_node_add54684f2798b3b5b04dc5db767213b8}{Node}}*\ rightChild);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }Huffman;}
+\DoxyCodeLine{00034\ \ \ \ \ uint64\_t\ \doxymbox{\hyperlink{class_node_a4ebe14f8a8c5299aa4bd10d631c3b67d}{getFrequency}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ frequency;\};}
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_node}{Node}}\ *left;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{class_node}{Node}}\ *right;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ uint8\_t\ symbol;\ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ uint64\_t\ frequency;\ \ }
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+
+\end{DoxyCode}

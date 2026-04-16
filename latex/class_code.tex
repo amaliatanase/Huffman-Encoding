@@ -1,0 +1,129 @@
+\doxysection{Code Class Reference}
+\hypertarget{class_code}{}\label{class_code}\index{Code@{Code}}
+
+
+Represents a binary code as a stack of bits.  
+
+
+
+
+{\ttfamily \+\#include $<$Code.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_code_a3605683bd8fd54691437ff05ba4431b9}\label{class_code_a3605683bd8fd54691437ff05ba4431b9} 
+{\bfseries Code} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Initializes an empty code. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_code_af349efa320a4d7cc259fc02729ad2d9b}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the code stack is empty. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_code_ac9e9fb2cd5861de546f569070a117ce1}{full}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the code stack has reached its maximum capacity. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_code_ad12a6cd30b7c33670662a1637d315fca}{push\+\_\+bit}} (uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Gets the current number of bits in the code. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_code_a98c577db94ac5084296f0e0254e98540}{pop\+\_\+bit}} (uint8\+\_\+t \&bit)
+\begin{DoxyCompactList}\small\item\em Pops the last bit off the code stack. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{class_code_a3043186e7511a8ecaeae703bb670ab7f}{get\+\_\+bit}} (uint32\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Retrieves a bit at a specific index without removing it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a binary code as a stack of bits. 
+
+
+\begin{DoxyItemize}
+\item This class is used to dynamically build the binary path (0s and 1s) while traversing the \doxylink{class_huffman}{Huffman} tree. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_code_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_code_af349efa320a4d7cc259fc02729ad2d9b}\index{Code@{Code}!empty@{empty}}
+\index{empty@{empty}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_code_af349efa320a4d7cc259fc02729ad2d9b} 
+bool Code::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the code stack is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_code_ac9e9fb2cd5861de546f569070a117ce1}\index{Code@{Code}!full@{full}}
+\index{full@{full}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily \label{class_code_ac9e9fb2cd5861de546f569070a117ce1} 
+bool Code::\+full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the code stack has reached its maximum capacity. 
+
+\begin{DoxyReturn}{Returns}
+True if full, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_code_a3043186e7511a8ecaeae703bb670ab7f}\index{Code@{Code}!get\_bit@{get\_bit}}
+\index{get\_bit@{get\_bit}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{get\_bit()}{get\_bit()}}
+{\footnotesize\ttfamily \label{class_code_a3043186e7511a8ecaeae703bb670ab7f} 
+uint8\+\_\+t Code::\+get\+\_\+bit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a bit at a specific index without removing it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The position of the bit to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The bit at the specified index, or 0 if out of bounds. 
+\end{DoxyReturn}
+\Hypertarget{class_code_a98c577db94ac5084296f0e0254e98540}\index{Code@{Code}!pop\_bit@{pop\_bit}}
+\index{pop\_bit@{pop\_bit}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{pop\_bit()}{pop\_bit()}}
+{\footnotesize\ttfamily \label{class_code_a98c577db94ac5084296f0e0254e98540} 
+bool Code::\+pop\+\_\+bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \&}]{bit}{}\end{DoxyParamCaption})}
+
+
+
+Pops the last bit off the code stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit} & Reference to a variable where the popped bit will be stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false if the stack is empty. 
+\end{DoxyReturn}
+\Hypertarget{class_code_ad12a6cd30b7c33670662a1637d315fca}\index{Code@{Code}!push\_bit@{push\_bit}}
+\index{push\_bit@{push\_bit}!Code@{Code}}
+\doxysubsubsection{\texorpdfstring{push\_bit()}{push\_bit()}}
+{\footnotesize\ttfamily \label{class_code_ad12a6cd30b7c33670662a1637d315fca} 
+bool Code::\+push\+\_\+bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bit}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current number of bits in the code. 
+
+\begin{DoxyReturn}{Returns}
+The size of the code sequence.
+\end{DoxyReturn}
+Pushes a single bit (0 or 1) onto the code stack. 
+\begin{DoxyParams}{Parameters}
+{\em bit} & The bit to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false if the stack is full. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_code_8h}{Code.\+h}}\item 
+Code.\+cpp\end{DoxyCompactItemize}

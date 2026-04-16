@@ -1,0 +1,44 @@
+\doxysection{Huffman.\+h}
+\hypertarget{_huffman_8h_source}{}\label{_huffman_8h_source}\doxymbox{\hyperlink{_huffman_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_node_8h}{Node.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_code_8h}{Code.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_header}{Header}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_header_a6d431f55b8493c8e12e5d140918ec4f9}{signature}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct_header_a655fff9070dbd240dad6323c959c3f31}{tree\_size}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ uint64\_t\ \doxymbox{\hyperlink{struct_header_a90ae58fc8e56804adfa739c73cde886f}{file\_size}};\ }
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_compare_node}{CompareNode}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct_compare_node_ab3d9bd99fcf99f5c95e099dd20a324b1}{operator()\ }}(\doxymbox{\hyperlink{class_node}{Node}}*\ \textcolor{keyword}{const}\&\ n1,\ \doxymbox{\hyperlink{class_node}{Node}}*\ \textcolor{keyword}{const}\&\ n2)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n1-\/>\doxymbox{\hyperlink{class_node_a4ebe14f8a8c5299aa4bd10d631c3b67d}{getFrequency}}()\ >\ n2-\/>\doxymbox{\hyperlink{class_node_a4ebe14f8a8c5299aa4bd10d631c3b67d}{getFrequency}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_huffman}{Huffman}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_huffman_a39b1a1e952651b9244d5fcde34657f7d}{computeHistogram}}(\textcolor{keyword}{const}\ std::string\&\ inputFilePath,\ uint64\_t\ histogram[\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\_SIZE}}]);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{class_node}{Node}}*\ \doxymbox{\hyperlink{class_huffman_ac10f86f3af81bfdb2c9e729d2501bd7f}{buildHuffmanTree}}(\textcolor{keyword}{const}\ uint64\_t\ histogram[\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\_SIZE}}]);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_huffman_a33d1c7c543cdf67915eaada39733c873}{generateCodeTable}}(\doxymbox{\hyperlink{class_node}{Node}}*\ root,\ \doxymbox{\hyperlink{class_code}{Code}}\&\ currentNode,\ \doxymbox{\hyperlink{class_code}{Code}}\ codeTable[\doxymbox{\hyperlink{defines_8h_a6572f1706059832f94025fa12c6c45ed}{ALPHABET\_SIZE}}]);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{class_node}{Node}}*\ \doxymbox{\hyperlink{class_huffman_a356473130f3dfb0b6800265802ad7458}{reconstructTree}}(\textcolor{keyword}{const}\ uint8\_t\ tree\_dump[],\ uint32\_t\ dump\_size);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_huffman_a2a92d22736879e8b4d3f07213c3f3ce7}{writeTreeDump}}(\doxymbox{\hyperlink{class_node}{Node}}*\ root,\ std::ofstream\&\ outFile);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_huffman_a10d9af43e18ffd3296ba8c05ca56281b}{compressFile}}(\textcolor{keyword}{const}\ std::string\&\ inputFilePath,\ \textcolor{keyword}{const}\ std::string\&\ outputFilePath);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_huffman_ac0840295377d62cfc3c80407baa52451}{decompressFile}}(\textcolor{keyword}{const}\ std::string\&\ inputFilePath,\ \textcolor{keyword}{const}\ std::string\&\ outputFilePath);}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+
+\end{DoxyCode}

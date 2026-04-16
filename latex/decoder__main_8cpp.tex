@@ -1,0 +1,29 @@
+\doxysection{decoder\+\_\+main.\+cpp File Reference}
+\hypertarget{decoder__main_8cpp}{}\label{decoder__main_8cpp}\index{decoder\_main.cpp@{decoder\_main.cpp}}
+
+
+Command-\/line utility for decompressing \doxylink{class_huffman}{Huffman} encoded files.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$unistd.\+h$>$}\newline
+{\ttfamily \+\#include $<$filesystem$>$}\newline
+{\ttfamily \+\#include "{}Huffman.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{decoder__main_8cpp_a0d20b69b0ad703df78459e1033d5c1d4}\label{decoder__main_8cpp_a0d20b69b0ad703df78459e1033d5c1d4} 
+void {\bfseries print\+Help} ()
+\item 
+\Hypertarget{decoder__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{decoder__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Command-\/line utility for decompressing \doxylink{class_huffman}{Huffman} encoded files. 
+
+
+\begin{DoxyItemize}
+\item Reconstructs the original file using the embedded tree dump. Supports standard flags (-\/i, -\/o, -\/h, -\/s). Defaults output to stdout if none provided. 
+\end{DoxyItemize}

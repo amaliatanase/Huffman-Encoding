@@ -1,0 +1,42 @@
+\doxysection{Compare\+Node Struct Reference}
+\hypertarget{struct_compare_node}{}\label{struct_compare_node}\index{CompareNode@{CompareNode}}
+
+
+Comparator used by the priority queue to order nodes by frequency.  
+
+
+
+
+{\ttfamily \+\#include $<$Huffman.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{struct_compare_node_ab3d9bd99fcf99f5c95e099dd20a324b1}{operator()}} (\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}const \&n1, \doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}const \&n2)
+\begin{DoxyCompactList}\small\item\em Compares two nodes based on their frequencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Comparator used by the priority queue to order nodes by frequency. 
+
+\label{doc-func-members}
+\Hypertarget{struct_compare_node_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_compare_node_ab3d9bd99fcf99f5c95e099dd20a324b1}\index{CompareNode@{CompareNode}!operator()@{operator()}}
+\index{operator()@{operator()}!CompareNode@{CompareNode}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{struct_compare_node_ab3d9bd99fcf99f5c95e099dd20a324b1} 
+bool Compare\+Node::\+operator() (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}const \&}]{n1}{, }\item[{\doxymbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*}const \&}]{n2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two nodes based on their frequencies. 
+
+\begin{DoxyReturn}{Returns}
+True if n1 has a greater frequency than n2 (min-\/heap logic). 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_huffman_8h}{Huffman.\+h}}\end{DoxyCompactItemize}
