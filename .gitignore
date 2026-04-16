@@ -1,0 +1,12 @@
+encoder
+decoder
+
+*.huff
+*.txt
+
+cmake-build-*/
+.idea/
+.DS_Store
+
+html/
+latex/
