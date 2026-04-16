@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "My Project", "index.html", [
-    [ "Huffman Project: Encoder and Decoder (C++)", "index.html", "index" ],
+    [ "<b>Huffman Project: Encoder and Decoder (C++)</b>", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

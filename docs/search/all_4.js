@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_0',['Huffman Project: Encoder and Decoder (C++)',['../index.html',1,'']]],
+  ['c_0',['&lt;b&gt;Huffman Project: Encoder and Decoder (C++)&lt;/b&gt;',['../index.html',1,'']]],
   ['code_1',['Code',['../class_code.html',1,'Code'],['../class_code.html#a3605683bd8fd54691437ff05ba4431b9',1,'Code::Code()']]],
   ['code_2eh_2',['Code.h',['../_code_8h.html',1,'']]],
   ['comparenode_3',['CompareNode',['../struct_compare_node.html',1,'']]],
