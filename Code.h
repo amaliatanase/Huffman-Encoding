@@ -55,6 +55,7 @@ public:
      * @return The bit at the specified index, or 0 if out of bounds.
      */
     uint8_t get_bit(uint32_t index) const;
+    uint32_t size() const;
 private:
     uint32_t top;                       ///< The current index of the top of the stack.
     uint8_t bits[MAX_CODE_SIZE];        ///< Array holding the individual bits.
