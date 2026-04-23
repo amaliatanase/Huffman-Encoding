@@ -2,9 +2,10 @@ encoder
 decoder
 
 *.huff
+build/
+cmake-build-*/
 *.txt
 
-cmake-build-*/
 .idea/
 .DS_Store
 

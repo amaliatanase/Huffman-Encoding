@@ -125,6 +125,7 @@ void Huffman::compressFile(const std::string& inputFilePath, const std::string& 
 
     if (!inFile || !outFile) {
         std::cerr << "Error opening the file." << std::endl;
+        freeTree(root);
         return;
     }
     //generate the header
@@ -174,6 +175,7 @@ void Huffman::compressFile(const std::string& inputFilePath, const std::string& 
     //close the files
     inFile.close();
     outFile.close();
+    freeTree(root);
 }
 
 void Huffman::decompressFile(const std::string& inputFilePath, const std::string& outputFilePath) {
@@ -221,4 +223,16 @@ void Huffman::decompressFile(const std::string& inputFilePath, const std::string
     //close the files
     inFile.close();
     outFile.close();
+    freeTree(root);
+}
+
+void Huffman::freeTree(Node* root) {
+    if (root == nullptr) return;
+
+    // delete the sub-trees
+    freeTree(root->left);
+    freeTree(root->right);
+
+    // delete current node
+    delete root;
 }

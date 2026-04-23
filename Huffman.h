@@ -89,6 +89,8 @@ public:
      * @param outputFilePath Path where the restored data will be written (or /dev/stdout).
      */
     void decompressFile(const std::string& inputFilePath, const std::string& outputFilePath);
+
+    void freeTree(Node* root);
 };
 
 
