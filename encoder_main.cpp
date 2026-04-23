@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     bool showStats = false;
 
     int option;
-    //getopt passed through all the arguments
+    //getopt passes through all the arguments
     //hi:o:s means that -h -i -o -s are accepted and i and o need a word after them
     while ((option = getopt(argc, argv, "hi:o:s")) != -1) {
         switch (option) {
@@ -65,8 +65,10 @@ int main(int argc, char *argv[]) {
         //search on the hard disk how big the files are
         uintmax_t uncompressedSize = std::filesystem::file_size(inputFile);
         uintmax_t compressedSize = std::filesystem::file_size(outputFile);
-        //casting in order to not lose the
-        double spaceSaving = 100.0 * (1.0 - (static_cast<double>(compressedSize) /uncompressedSize));
+        double spaceSaving = 0;
+        //casting in order to not lose precision
+        if (uncompressedSize > 0)
+            spaceSaving = 100.0 * (1.0 - (static_cast<double>(compressedSize) /uncompressedSize));
         std::cout << "STATISTIC COMPRESSING\n" << std::endl;
         std::cout << "Original size (-i): " << uncompressedSize << "bytes\n";
         std::cout << "Compressed size (-o): " << compressedSize << "bytes\n";

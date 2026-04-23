@@ -12,9 +12,9 @@
 void printHelp() {
     std::cout << "Usage: ./decoder [Options]\n" << std::endl;
     std::cout << "Options:" << std::endl;
-    std::cout << " -h            : Help\n" << std::endl;
-    std::cout << " -i <infile>   : Compressed file (.huff)\n" << std::endl;
-    std::cout << " -o <outfile>  : File to save the original text\n" << std::endl;
+    std::cout << " -h            : Help" << std::endl;
+    std::cout << " -i <infile>   : Compressed file (.huff)" << std::endl;
+    std::cout << " -o <outfile>  : File to save the original text" << std::endl;
     std::cout << " -s            : Outputs detailed statistics about the compression" << std::endl;
 }
 
@@ -52,18 +52,14 @@ int main(int argc, char *argv[]) {
     Huffman huffman;
     huffman.decompressFile(inputFile, actualOutput);
     if (showStats) {
-        try {
-            uintmax_t compressedSize = std::filesystem::file_size(inputFile);
-            uintmax_t uncompressedSize = std::filesystem::file_size(actualOutput);
-            double spaceSaving = 0;
-            if (uncompressedSize > 0)
-                spaceSaving = 100.0 * (1.0 - (static_cast<double>(compressedSize) / uncompressedSize));
-            std::cerr << "Compressed file size: " << compressedSize << " bytes" << std::endl;
-            std::cerr << "Decompressed file size: " << uncompressedSize << " bytes" << std::endl;
-            std::cerr << "Space saving: " << spaceSaving << " %" << std::endl;
-        }catch (const std::exception& e) {
-            std::cerr << "Error calculating statistics: " << e.what() << std::endl;
-        }
+        uintmax_t compressedSize = std::filesystem::file_size(inputFile);
+        uintmax_t uncompressedSize = std::filesystem::file_size(actualOutput);
+        double spaceSaving = 0;
+        if (uncompressedSize > 0)
+            spaceSaving = 100.0 * (1.0 - (static_cast<double>(compressedSize) / uncompressedSize));
+        std::cout << "Compressed file size: " << compressedSize << " bytes" << std::endl;
+        std::cout << "Decompressed file size: " << uncompressedSize << " bytes" << std::endl;
+        std::cout << "Space saving: " << spaceSaving << " %" << std::endl;
     }
 
     if (outputFile == "")

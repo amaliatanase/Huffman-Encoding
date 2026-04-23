@@ -94,7 +94,7 @@ void Huffman::writeTreeDump(Node* root, std::ofstream& outFile) {
     if (root == nullptr) return;
     writeTreeDump(root->left, outFile);
     writeTreeDump(root->right, outFile);
-    //if ot is a leaf it writes L followed by the symbol of the leaf
+    //if root is a leaf it writes L followed by the symbol of the leaf
     if (root->left == nullptr && root->right == nullptr) {
         char type = 'L';
         outFile.write(&type, sizeof(char));
@@ -167,7 +167,7 @@ void Huffman::compressFile(const std::string& inputFilePath, const std::string& 
     }
     //if there are any bytes left
     if (bitsInBuffer > 0) {
-        //if there is less than a byte left, teh bits need to be shifted in order to cover 8 bits
+        //if there is less than a byte left, the bits need to be shifted in order to cover 8 bits
         writeBuffer = writeBuffer << (8 - bitsInBuffer);
         outFile.write(reinterpret_cast<const char*>(&writeBuffer), sizeof(writeBuffer));
     }
