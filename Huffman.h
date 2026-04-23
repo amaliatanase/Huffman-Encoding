@@ -90,6 +90,13 @@ public:
      */
     void decompressFile(const std::string& inputFilePath, const std::string& outputFilePath);
 
+    /**
+    * @brief Recursively frees the memory allocated for the Huffman tree nodes.
+    * * This function performs a post-order traversal (left, right, then root)
+    * to ensure that all nodes created with the 'new' operator are properly
+    * deallocated, preventing memory leaks.
+    * * @param root Pointer to the root node of the tree (or subtree) to be deleted.
+    */
     void freeTree(Node* root);
 };
 
