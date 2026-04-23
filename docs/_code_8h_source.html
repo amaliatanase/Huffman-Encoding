@@ -110,10 +110,11 @@ $(function(){initNavTree('_code_8h_source.html','',''); });
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_code.html#a98c577db94ac5084296f0e0254e98540">pop_bit</a>(uint8_t&amp; bit);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    uint8_t <a class="code hl_function" href="class_code.html#a3043186e7511a8ecaeae703bb670ab7f">get_bit</a>(uint32_t index) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    uint32_t top;                       </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    uint8_t bits[<a class="code hl_define" href="defines_8h.html#ac417f30b11356d61ab40f1dad7337ae7">MAX_CODE_SIZE</a>];        </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    uint32_t size() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    uint32_t top;                       </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    uint8_t bits[<a class="code hl_define" href="defines_8h.html#ac417f30b11356d61ab40f1dad7337ae7">MAX_CODE_SIZE</a>];        </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
 </div>
 <div class="ttc" id="aclass_code_html_a3043186e7511a8ecaeae703bb670ab7f"><div class="ttname"><a href="class_code.html#a3043186e7511a8ecaeae703bb670ab7f">Code::get_bit</a></div><div class="ttdeci">uint8_t get_bit(uint32_t index) const</div><div class="ttdoc">Retrieves a bit at a specific index without removing it.</div><div class="ttdef"><b>Definition</b> Code.cpp:39</div></div>
 <div class="ttc" id="aclass_code_html_a3605683bd8fd54691437ff05ba4431b9"><div class="ttname"><a href="class_code.html#a3605683bd8fd54691437ff05ba4431b9">Code::Code</a></div><div class="ttdeci">Code()</div><div class="ttdoc">Default constructor. Initializes an empty code.</div><div class="ttdef"><b>Definition</b> Code.cpp:3</div></div>
